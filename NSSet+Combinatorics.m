@@ -118,12 +118,17 @@
 - (NSSet*) combinationsOfSizesFromSize:(NSUInteger)smallestSize toSize:(NSUInteger)biggestSize {
 	NSMutableSet *finalSet = [[NSMutableSet alloc] init];
 	
-	for (NSUInteger counter = smallestSize; counter < biggestSize; counter++) {
+	for (NSUInteger counter = smallestSize; counter < biggestSize + 1; counter++) {
 		NSSet *tempSet = [self combinationsOfSize:counter];
 		[finalSet addObjectsFromArray:[tempSet allObjects]];
 	}
 	
 	return finalSet;
+}
+
+	// Convenience method that assumes all combination sizes from 1 to count of items in set.
+- (NSSet*)combinations {
+	return [self combinationsOfSizesFromSize:1 toSize:self.count];
 }
 
 @end
