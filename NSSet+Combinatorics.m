@@ -115,4 +115,15 @@
 	return retVal;
 }
 
+- (NSSet*) combinationsOfSizesFromSize:(NSUInteger)smallestSize toSize:(NSUInteger)biggestSize {
+	NSMutableSet *finalSet = [[NSMutableSet alloc] init];
+	
+	for (NSUInteger counter = smallestSize; counter < biggestSize; counter++) {
+		NSSet *tempSet = [self combinationsOfSize:counter];
+		[finalSet addObjectsFromArray:[tempSet allObjects]];
+	}
+	
+	return finalSet;
+}
+
 @end
