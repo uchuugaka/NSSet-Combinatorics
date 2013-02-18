@@ -2,13 +2,14 @@
 
 @interface NSSet (Combinatorics)
 
-- (NSSet*) permutations;
+- (NSSet*)permutations;
 
-- (NSSet*) variationsOfSize:(NSUInteger)size;
-- (NSSet*) variationsWithRepetitionsOfSize:(NSUInteger)size;
+- (NSSet*)variationsOfSize:(NSUInteger)size;
+- (NSSet*)variationsWithRepetitionsOfSize:(NSUInteger)size;
 
-- (NSSet*) combinationsOfSize:(NSUInteger)size;
-- (NSSet*) combinationsWithRepetitionsOfSize:(NSUInteger)size;
-- (NSSet*) combinationsOfSizesFromSize:(NSUInteger)smallestSize toSize:(NSUInteger)biggestSize;
+- (NSSet*)combinations;
+- (NSSet*)combinationsOfSize:(NSUInteger)size;
+- (NSSet*)combinationsWithRepetitionsOfSize:(NSUInteger)size;
+- (NSSet*)combinationsOfSizesFromSize:(NSUInteger)smallestSize toSize:(NSUInteger)biggestSize;
 
 @end
