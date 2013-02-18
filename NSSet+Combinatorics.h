@@ -9,5 +9,6 @@
 
 - (NSSet*) combinationsOfSize:(NSUInteger)size;
 - (NSSet*) combinationsWithRepetitionsOfSize:(NSUInteger)size;
+- (NSSet*) combinationsOfSizesFromSize:(NSUInteger)smallestSize toSize:(NSUInteger)biggestSize;
 
 @end
